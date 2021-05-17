@@ -1,0 +1,791 @@
+[2021-05-15 22:20:53] [marian] Marian v1.10.0 6f6d4846 2021-02-06 15:35:16 -0800
+[2021-05-15 22:20:53] [marian] Running on fujitsu as process 30888 with command line:
+[2021-05-15 22:20:53] [marian] /root/marian/build/marian --model /tank/models/translation/cheepl/isl_eng__all__1/model.npz --type transformer --train-sets /tank/datasets/translation/cheepl/isl_eng/all.is.filtered.dedup.txt /tank/datasets/translation/cheepl/isl_eng/all.en.filtered.dedup.txt --max-length 500 --mini-batch-fit -w 21000 --maxi-batch 4000 --valid-freq 5000 --save-freq 5000 --disp-freq 5000 --valid-metrics perplexity cross-entropy --valid-sets /tank/datasets/translation/cheepl/isl_eng/dev.is.txt /tank/datasets/translation/cheepl/isl_eng/dev.en.txt --valid-script-path ./scripts/validate.sh --valid-mini-batch 64 --beam-size 6 --normalize 0.6 --log /tank/models/translation/cheepl/isl_eng__all__1/train.log --valid-log /tank/models/translation/cheepl/isl_eng__all__1/valid.log --enc-depth 6 --dec-depth 6 --transformer-heads 8 --transformer-postprocess-emb d --transformer-postprocess dan --transformer-dropout 0.1 --label-smoothing 0.1 --learn-rate 0.0003 --lr-warmup 16000 --lr-decay-inv-sqrt 16000 --lr-report --optimizer-params 0.9 0.98 1e-09 --clip-norm 5 --devices 0 1 --sync-sgd --seed 1111 --exponential-smoothing --relative-paths --after-epochs 50 --vocabs /tank/datasets/translation/cheepl/isl_eng/source.spm /tank/datasets/translation/cheepl/isl_eng/target.spm
+[2021-05-15 22:20:53] [config] after: 0e
+[2021-05-15 22:20:53] [config] after-batches: 0
+[2021-05-15 22:20:53] [config] after-epochs: 50
+[2021-05-15 22:20:53] [config] all-caps-every: 0
+[2021-05-15 22:20:53] [config] allow-unk: false
+[2021-05-15 22:20:53] [config] authors: false
+[2021-05-15 22:20:53] [config] beam-size: 6
+[2021-05-15 22:20:53] [config] bert-class-symbol: "[CLS]"
+[2021-05-15 22:20:53] [config] bert-mask-symbol: "[MASK]"
+[2021-05-15 22:20:53] [config] bert-masking-fraction: 0.15
+[2021-05-15 22:20:53] [config] bert-sep-symbol: "[SEP]"
+[2021-05-15 22:20:53] [config] bert-train-type-embeddings: true
+[2021-05-15 22:20:53] [config] bert-type-vocab-size: 2
+[2021-05-15 22:20:53] [config] build-info: ""
+[2021-05-15 22:20:53] [config] cite: false
+[2021-05-15 22:20:53] [config] clip-norm: 5
+[2021-05-15 22:20:53] [config] cost-scaling:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] cost-type: ce-sum
+[2021-05-15 22:20:53] [config] cpu-threads: 0
+[2021-05-15 22:20:53] [config] data-weighting: ""
+[2021-05-15 22:20:53] [config] data-weighting-type: sentence
+[2021-05-15 22:20:53] [config] dec-cell: gru
+[2021-05-15 22:20:53] [config] dec-cell-base-depth: 2
+[2021-05-15 22:20:53] [config] dec-cell-high-depth: 1
+[2021-05-15 22:20:53] [config] dec-depth: 6
+[2021-05-15 22:20:53] [config] devices:
+[2021-05-15 22:20:53] [config]   - 0
+[2021-05-15 22:20:53] [config]   - 1
+[2021-05-15 22:20:53] [config] dim-emb: 512
+[2021-05-15 22:20:53] [config] dim-rnn: 1024
+[2021-05-15 22:20:53] [config] dim-vocabs:
+[2021-05-15 22:20:53] [config]   - 0
+[2021-05-15 22:20:53] [config]   - 0
+[2021-05-15 22:20:53] [config] disp-first: 0
+[2021-05-15 22:20:53] [config] disp-freq: 5000
+[2021-05-15 22:20:53] [config] disp-label-counts: true
+[2021-05-15 22:20:53] [config] dropout-rnn: 0
+[2021-05-15 22:20:53] [config] dropout-src: 0
+[2021-05-15 22:20:53] [config] dropout-trg: 0
+[2021-05-15 22:20:53] [config] dump-config: ""
+[2021-05-15 22:20:53] [config] early-stopping: 10
+[2021-05-15 22:20:53] [config] embedding-fix-src: false
+[2021-05-15 22:20:53] [config] embedding-fix-trg: false
+[2021-05-15 22:20:53] [config] embedding-normalization: false
+[2021-05-15 22:20:53] [config] embedding-vectors:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] enc-cell: gru
+[2021-05-15 22:20:53] [config] enc-cell-depth: 1
+[2021-05-15 22:20:53] [config] enc-depth: 6
+[2021-05-15 22:20:53] [config] enc-type: bidirectional
+[2021-05-15 22:20:53] [config] english-title-case-every: 0
+[2021-05-15 22:20:53] [config] exponential-smoothing: 0.0001
+[2021-05-15 22:20:53] [config] factor-weight: 1
+[2021-05-15 22:20:53] [config] grad-dropping-momentum: 0
+[2021-05-15 22:20:53] [config] grad-dropping-rate: 0
+[2021-05-15 22:20:53] [config] grad-dropping-warmup: 100
+[2021-05-15 22:20:53] [config] gradient-checkpointing: false
+[2021-05-15 22:20:53] [config] guided-alignment: none
+[2021-05-15 22:20:53] [config] guided-alignment-cost: mse
+[2021-05-15 22:20:53] [config] guided-alignment-weight: 0.1
+[2021-05-15 22:20:53] [config] ignore-model-config: false
+[2021-05-15 22:20:53] [config] input-types:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] interpolate-env-vars: false
+[2021-05-15 22:20:53] [config] keep-best: false
+[2021-05-15 22:20:53] [config] label-smoothing: 0.1
+[2021-05-15 22:20:53] [config] layer-normalization: false
+[2021-05-15 22:20:53] [config] learn-rate: 0.0003
+[2021-05-15 22:20:53] [config] lemma-dim-emb: 0
+[2021-05-15 22:20:53] [config] log: /tank/models/translation/cheepl/isl_eng__all__1/train.log
+[2021-05-15 22:20:53] [config] log-level: info
+[2021-05-15 22:20:53] [config] log-time-zone: ""
+[2021-05-15 22:20:53] [config] logical-epoch:
+[2021-05-15 22:20:53] [config]   - 1e
+[2021-05-15 22:20:53] [config]   - 0
+[2021-05-15 22:20:53] [config] lr-decay: 0
+[2021-05-15 22:20:53] [config] lr-decay-freq: 50000
+[2021-05-15 22:20:53] [config] lr-decay-inv-sqrt:
+[2021-05-15 22:20:53] [config]   - 16000
+[2021-05-15 22:20:53] [config] lr-decay-repeat-warmup: false
+[2021-05-15 22:20:53] [config] lr-decay-reset-optimizer: false
+[2021-05-15 22:20:53] [config] lr-decay-start:
+[2021-05-15 22:20:53] [config]   - 10
+[2021-05-15 22:20:53] [config]   - 1
+[2021-05-15 22:20:53] [config] lr-decay-strategy: epoch+stalled
+[2021-05-15 22:20:53] [config] lr-report: true
+[2021-05-15 22:20:53] [config] lr-warmup: 16000
+[2021-05-15 22:20:53] [config] lr-warmup-at-reload: false
+[2021-05-15 22:20:53] [config] lr-warmup-cycle: false
+[2021-05-15 22:20:53] [config] lr-warmup-start-rate: 0
+[2021-05-15 22:20:53] [config] max-length: 500
+[2021-05-15 22:20:53] [config] max-length-crop: false
+[2021-05-15 22:20:53] [config] max-length-factor: 3
+[2021-05-15 22:20:53] [config] maxi-batch: 4000
+[2021-05-15 22:20:53] [config] maxi-batch-sort: trg
+[2021-05-15 22:20:53] [config] mini-batch: 64
+[2021-05-15 22:20:53] [config] mini-batch-fit: true
+[2021-05-15 22:20:53] [config] mini-batch-fit-step: 10
+[2021-05-15 22:20:53] [config] mini-batch-track-lr: false
+[2021-05-15 22:20:53] [config] mini-batch-warmup: 0
+[2021-05-15 22:20:53] [config] mini-batch-words: 0
+[2021-05-15 22:20:53] [config] mini-batch-words-ref: 0
+[2021-05-15 22:20:53] [config] model: /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-15 22:20:53] [config] multi-loss-type: sum
+[2021-05-15 22:20:53] [config] multi-node: false
+[2021-05-15 22:20:53] [config] multi-node-overlap: true
+[2021-05-15 22:20:53] [config] n-best: false
+[2021-05-15 22:20:53] [config] no-nccl: false
+[2021-05-15 22:20:53] [config] no-reload: false
+[2021-05-15 22:20:53] [config] no-restore-corpus: false
+[2021-05-15 22:20:53] [config] normalize: 0.6
+[2021-05-15 22:20:53] [config] normalize-gradient: false
+[2021-05-15 22:20:53] [config] num-devices: 0
+[2021-05-15 22:20:53] [config] optimizer: adam
+[2021-05-15 22:20:53] [config] optimizer-delay: 1
+[2021-05-15 22:20:53] [config] optimizer-params:
+[2021-05-15 22:20:53] [config]   - 0.9
+[2021-05-15 22:20:53] [config]   - 0.98
+[2021-05-15 22:20:53] [config]   - 1e-09
+[2021-05-15 22:20:53] [config] output-omit-bias: false
+[2021-05-15 22:20:53] [config] overwrite: false
+[2021-05-15 22:20:53] [config] precision:
+[2021-05-15 22:20:53] [config]   - float32
+[2021-05-15 22:20:53] [config]   - float32
+[2021-05-15 22:20:53] [config]   - float32
+[2021-05-15 22:20:53] [config] pretrained-model: ""
+[2021-05-15 22:20:53] [config] quantize-biases: false
+[2021-05-15 22:20:53] [config] quantize-bits: 0
+[2021-05-15 22:20:53] [config] quantize-log-based: false
+[2021-05-15 22:20:53] [config] quantize-optimization-steps: 0
+[2021-05-15 22:20:53] [config] quiet: false
+[2021-05-15 22:20:53] [config] quiet-translation: false
+[2021-05-15 22:20:53] [config] relative-paths: true
+[2021-05-15 22:20:53] [config] right-left: false
+[2021-05-15 22:20:53] [config] save-freq: 5000
+[2021-05-15 22:20:53] [config] seed: 1111
+[2021-05-15 22:20:53] [config] sentencepiece-alphas:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] sentencepiece-max-lines: 2000000
+[2021-05-15 22:20:53] [config] sentencepiece-options: ""
+[2021-05-15 22:20:53] [config] shuffle: data
+[2021-05-15 22:20:53] [config] shuffle-in-ram: false
+[2021-05-15 22:20:53] [config] sigterm: save-and-exit
+[2021-05-15 22:20:53] [config] skip: false
+[2021-05-15 22:20:53] [config] sqlite: ""
+[2021-05-15 22:20:53] [config] sqlite-drop: false
+[2021-05-15 22:20:53] [config] sync-sgd: true
+[2021-05-15 22:20:53] [config] tempdir: /tmp
+[2021-05-15 22:20:53] [config] tied-embeddings: false
+[2021-05-15 22:20:53] [config] tied-embeddings-all: false
+[2021-05-15 22:20:53] [config] tied-embeddings-src: false
+[2021-05-15 22:20:53] [config] train-embedder-rank:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] train-sets:
+[2021-05-15 22:20:53] [config]   - /tank/datasets/translation/cheepl/isl_eng/all.is.filtered.dedup.txt
+[2021-05-15 22:20:53] [config]   - /tank/datasets/translation/cheepl/isl_eng/all.en.filtered.dedup.txt
+[2021-05-15 22:20:53] [config] transformer-aan-activation: swish
+[2021-05-15 22:20:53] [config] transformer-aan-depth: 2
+[2021-05-15 22:20:53] [config] transformer-aan-nogate: false
+[2021-05-15 22:20:53] [config] transformer-decoder-autoreg: self-attention
+[2021-05-15 22:20:53] [config] transformer-depth-scaling: false
+[2021-05-15 22:20:53] [config] transformer-dim-aan: 2048
+[2021-05-15 22:20:53] [config] transformer-dim-ffn: 2048
+[2021-05-15 22:20:53] [config] transformer-dropout: 0.1
+[2021-05-15 22:20:53] [config] transformer-dropout-attention: 0
+[2021-05-15 22:20:53] [config] transformer-dropout-ffn: 0
+[2021-05-15 22:20:53] [config] transformer-ffn-activation: swish
+[2021-05-15 22:20:53] [config] transformer-ffn-depth: 2
+[2021-05-15 22:20:53] [config] transformer-guided-alignment-layer: last
+[2021-05-15 22:20:53] [config] transformer-heads: 8
+[2021-05-15 22:20:53] [config] transformer-no-projection: false
+[2021-05-15 22:20:53] [config] transformer-pool: false
+[2021-05-15 22:20:53] [config] transformer-postprocess: dan
+[2021-05-15 22:20:53] [config] transformer-postprocess-emb: d
+[2021-05-15 22:20:53] [config] transformer-postprocess-top: ""
+[2021-05-15 22:20:53] [config] transformer-preprocess: ""
+[2021-05-15 22:20:53] [config] transformer-tied-layers:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] transformer-train-position-embeddings: false
+[2021-05-15 22:20:53] [config] tsv: false
+[2021-05-15 22:20:53] [config] tsv-fields: 0
+[2021-05-15 22:20:53] [config] type: transformer
+[2021-05-15 22:20:53] [config] ulr: false
+[2021-05-15 22:20:53] [config] ulr-dim-emb: 0
+[2021-05-15 22:20:53] [config] ulr-dropout: 0
+[2021-05-15 22:20:53] [config] ulr-keys-vectors: ""
+[2021-05-15 22:20:53] [config] ulr-query-vectors: ""
+[2021-05-15 22:20:53] [config] ulr-softmax-temperature: 1
+[2021-05-15 22:20:53] [config] ulr-trainable-transformation: false
+[2021-05-15 22:20:53] [config] unlikelihood-loss: false
+[2021-05-15 22:20:53] [config] valid-freq: 5000
+[2021-05-15 22:20:53] [config] valid-log: /tank/models/translation/cheepl/isl_eng__all__1/valid.log
+[2021-05-15 22:20:53] [config] valid-max-length: 1000
+[2021-05-15 22:20:53] [config] valid-metrics:
+[2021-05-15 22:20:53] [config]   - perplexity
+[2021-05-15 22:20:53] [config]   - cross-entropy
+[2021-05-15 22:20:53] [config] valid-mini-batch: 64
+[2021-05-15 22:20:53] [config] valid-reset-stalled: false
+[2021-05-15 22:20:53] [config] valid-script-args:
+[2021-05-15 22:20:53] [config]   []
+[2021-05-15 22:20:53] [config] valid-script-path: ./scripts/validate.sh
+[2021-05-15 22:20:53] [config] valid-sets:
+[2021-05-15 22:20:53] [config]   - /tank/datasets/translation/cheepl/isl_eng/dev.is.txt
+[2021-05-15 22:20:53] [config]   - /tank/datasets/translation/cheepl/isl_eng/dev.en.txt
+[2021-05-15 22:20:53] [config] valid-translation-output: ""
+[2021-05-15 22:20:53] [config] vocabs:
+[2021-05-15 22:20:53] [config]   - /tank/datasets/translation/cheepl/isl_eng/source.spm
+[2021-05-15 22:20:53] [config]   - /tank/datasets/translation/cheepl/isl_eng/target.spm
+[2021-05-15 22:20:53] [config] word-penalty: 0
+[2021-05-15 22:20:53] [config] word-scores: false
+[2021-05-15 22:20:53] [config] workspace: 21000
+[2021-05-15 22:20:53] [config] Model is being created with Marian v1.10.0 6f6d4846 2021-02-06 15:35:16 -0800
+[2021-05-15 22:20:53] Using synchronous SGD
+[2021-05-15 22:20:53] [data] Loading SentencePiece vocabulary from file /tank/datasets/translation/cheepl/isl_eng/source.spm
+[2021-05-15 22:20:53] [data] Setting vocabulary size for input 0 to 32,000
+[2021-05-15 22:20:53] [data] Loading SentencePiece vocabulary from file /tank/datasets/translation/cheepl/isl_eng/target.spm
+[2021-05-15 22:20:53] [data] Setting vocabulary size for input 1 to 32,000
+[2021-05-15 22:20:53] [comm] Compiled without MPI support. Running as a single process on fujitsu
+[2021-05-15 22:20:53] [batching] Collecting statistics for batch fitting with step size 10
+[2021-05-15 22:20:53] [memory] Extending reserved space to 21120 MB (device gpu0)
+[2021-05-15 22:20:54] [memory] Extending reserved space to 21120 MB (device gpu1)
+[2021-05-15 22:20:54] [comm] Using NCCL 2.8.3 for GPU communication
+[2021-05-15 22:20:54] [comm] NCCLCommunicator constructed successfully
+[2021-05-15 22:20:54] [training] Using 2 GPUs
+[2021-05-15 22:20:54] [logits] Applying loss function for 1 factor(s)
+[2021-05-15 22:20:54] [memory] Reserving 355 MB, device gpu0
+[2021-05-15 22:20:55] [gpu] 16-bit TensorCores enabled for float32 matrix operations
+[2021-05-15 22:20:55] [memory] Reserving 355 MB, device gpu0
+[2021-05-15 22:22:46] [batching] Done. Typical MB size is 29,413 target words
+[2021-05-15 22:22:46] [memory] Extending reserved space to 21120 MB (device gpu0)
+[2021-05-15 22:22:46] [memory] Extending reserved space to 21120 MB (device gpu1)
+[2021-05-15 22:22:47] [comm] Using NCCL 2.8.3 for GPU communication
+[2021-05-15 22:22:47] [comm] NCCLCommunicator constructed successfully
+[2021-05-15 22:22:47] [training] Using 2 GPUs
+[2021-05-15 22:22:47] Training started
+[2021-05-15 22:22:47] [data] Shuffling data
+[2021-05-15 22:22:49] [data] Done reading 4,661,110 sentences
+[2021-05-15 22:23:07] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-15 22:23:15] [training] Batches are processed as 1 process(es) x 2 devices/process
+[2021-05-15 22:23:15] [memory] Reserving 355 MB, device gpu0
+[2021-05-15 22:23:15] [memory] Reserving 355 MB, device gpu1
+[2021-05-15 22:23:15] [memory] Reserving 355 MB, device gpu0
+[2021-05-15 22:23:16] [memory] Reserving 355 MB, device gpu1
+[2021-05-15 22:23:16] [memory] Reserving 177 MB, device gpu0
+[2021-05-15 22:23:16] [memory] Reserving 177 MB, device gpu1
+[2021-05-15 22:23:16] [memory] Reserving 355 MB, device gpu0
+[2021-05-15 22:23:16] [memory] Reserving 355 MB, device gpu1
+[2021-05-15 22:57:09] Seen 4661098 samples
+[2021-05-15 22:57:09] Starting data epoch 2 in logical epoch 2
+[2021-05-15 22:57:09] [data] Shuffling data
+[2021-05-15 22:57:11] [data] Done reading 4,661,110 sentences
+[2021-05-15 22:57:29] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-15 23:04:27] Ep. 2 : Up. 5000 : Sen. 931,654 : Cost 6.64963579 * 109,643,280 @ 37,392 after 109,643,280 : Time 2500.90s : 43841.59 words/s : L.r. 9.3750e-05
+[2021-05-15 23:04:27] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-15 23:04:30] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter5000.npz
+[2021-05-15 23:04:31] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-15 23:04:34] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-15 23:04:41] [valid] Ep. 2 : Up. 5000 : perplexity : 30.9794 : new best
+[2021-05-15 23:04:42] [valid] Ep. 2 : Up. 5000 : cross-entropy : 32.6873 : new best
+[2021-05-15 23:32:00] Seen 4661098 samples
+[2021-05-15 23:32:00] Starting data epoch 3 in logical epoch 3
+[2021-05-15 23:32:00] [data] Shuffling data
+[2021-05-15 23:32:03] [data] Done reading 4,661,110 sentences
+[2021-05-15 23:32:20] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-15 23:46:01] Ep. 3 : Up. 10000 : Sen. 1,861,061 : Cost 4.52399778 * 109,641,344 @ 16,997 after 219,284,624 : Time 2494.19s : 43958.65 words/s : L.r. 1.8750e-04
+[2021-05-15 23:46:01] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-15 23:46:07] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter10000.npz
+[2021-05-15 23:46:09] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-15 23:46:13] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-15 23:46:22] [valid] Ep. 3 : Up. 10000 : perplexity : 5.51829 : new best
+[2021-05-15 23:46:22] [valid] Ep. 3 : Up. 10000 : cross-entropy : 16.2619 : new best
+[2021-05-16 00:06:47] Seen 4661098 samples
+[2021-05-16 00:06:47] Starting data epoch 4 in logical epoch 4
+[2021-05-16 00:06:47] [data] Shuffling data
+[2021-05-16 00:06:51] [data] Done reading 4,661,110 sentences
+[2021-05-16 00:07:09] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 00:27:39] Ep. 4 : Up. 15000 : Sen. 2,779,878 : Cost 3.37497449 * 109,509,422 @ 21,648 after 328,794,046 : Time 2497.85s : 43841.43 words/s : L.r. 2.8125e-04
+[2021-05-16 00:27:39] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 00:27:43] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter15000.npz
+[2021-05-16 00:27:44] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 00:27:47] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 00:27:55] [valid] Ep. 4 : Up. 15000 : perplexity : 3.42126 : new best
+[2021-05-16 00:27:56] [valid] Ep. 4 : Up. 15000 : cross-entropy : 11.7104 : new best
+[2021-05-16 00:41:52] Seen 4661098 samples
+[2021-05-16 00:41:52] Starting data epoch 5 in logical epoch 5
+[2021-05-16 00:41:52] [data] Shuffling data
+[2021-05-16 00:41:55] [data] Done reading 4,661,110 sentences
+[2021-05-16 00:42:13] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 01:09:39] Ep. 5 : Up. 20000 : Sen. 3,698,746 : Cost 3.02755427 * 109,701,720 @ 16,188 after 438,495,766 : Time 2519.76s : 43536.57 words/s : L.r. 2.6833e-04
+[2021-05-16 01:09:39] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 01:09:41] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter20000.npz
+[2021-05-16 01:09:43] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 01:09:47] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 01:09:55] [valid] Ep. 5 : Up. 20000 : perplexity : 2.88953 : new best
+[2021-05-16 01:09:56] [valid] Ep. 5 : Up. 20000 : cross-entropy : 10.1023 : new best
+[2021-05-16 01:17:02] Seen 4661098 samples
+[2021-05-16 01:17:02] Starting data epoch 6 in logical epoch 6
+[2021-05-16 01:17:02] [data] Shuffling data
+[2021-05-16 01:17:04] [data] Done reading 4,661,110 sentences
+[2021-05-16 01:17:22] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 01:51:18] Ep. 6 : Up. 25000 : Sen. 4,632,939 : Cost 2.84965038 * 109,441,807 @ 15,325 after 547,937,573 : Time 2498.94s : 43795.36 words/s : L.r. 2.4000e-04
+[2021-05-16 01:51:18] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 01:51:20] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter25000.npz
+[2021-05-16 01:51:22] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 01:51:24] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 01:51:31] [valid] Ep. 6 : Up. 25000 : perplexity : 2.66549 : new best
+[2021-05-16 01:51:31] [valid] Ep. 6 : Up. 25000 : cross-entropy : 9.33388 : new best
+[2021-05-16 01:51:50] Seen 4661098 samples
+[2021-05-16 01:51:50] Starting data epoch 7 in logical epoch 7
+[2021-05-16 01:51:50] [data] Shuffling data
+[2021-05-16 01:51:53] [data] Done reading 4,661,110 sentences
+[2021-05-16 01:52:11] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 02:26:30] Seen 4661098 samples
+[2021-05-16 02:26:30] Starting data epoch 8 in logical epoch 8
+[2021-05-16 02:26:30] [data] Shuffling data
+[2021-05-16 02:26:32] [data] Done reading 4,661,110 sentences
+[2021-05-16 02:26:49] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 02:33:25] Ep. 8 : Up. 30000 : Sen. 884,200 : Cost 2.74467754 * 109,318,516 @ 11,620 after 657,256,089 : Time 2527.78s : 43246.84 words/s : L.r. 2.1909e-04
+[2021-05-16 02:33:25] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 02:33:28] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter30000.npz
+[2021-05-16 02:33:29] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 02:33:32] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 02:33:38] [valid] Ep. 8 : Up. 30000 : perplexity : 2.54895 : new best
+[2021-05-16 02:33:39] [valid] Ep. 8 : Up. 30000 : cross-entropy : 8.90827 : new best
+[2021-05-16 03:01:24] Seen 4661098 samples
+[2021-05-16 03:01:24] Starting data epoch 9 in logical epoch 9
+[2021-05-16 03:01:24] [data] Shuffling data
+[2021-05-16 03:01:27] [data] Done reading 4,661,110 sentences
+[2021-05-16 03:01:45] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 03:15:01] Ep. 9 : Up. 35000 : Sen. 1,832,715 : Cost 2.67954326 * 110,023,458 @ 27,824 after 767,279,547 : Time 2495.60s : 44086.97 words/s : L.r. 2.0284e-04
+[2021-05-16 03:15:01] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 03:15:06] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter35000.npz
+[2021-05-16 03:15:08] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 03:15:13] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 03:15:23] [valid] Ep. 9 : Up. 35000 : perplexity : 2.47815 : new best
+[2021-05-16 03:15:23] [valid] Ep. 9 : Up. 35000 : cross-entropy : 8.64007 : new best
+[2021-05-16 03:36:24] Seen 4661098 samples
+[2021-05-16 03:36:24] Starting data epoch 10 in logical epoch 10
+[2021-05-16 03:36:24] [data] Shuffling data
+[2021-05-16 03:36:27] [data] Done reading 4,661,110 sentences
+[2021-05-16 03:36:46] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 03:57:11] Ep. 10 : Up. 40000 : Sen. 2,763,988 : Cost 2.63273501 * 109,767,486 @ 20,029 after 877,047,033 : Time 2530.53s : 43377.33 words/s : L.r. 1.8974e-04
+[2021-05-16 03:57:11] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 03:57:15] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter40000.npz
+[2021-05-16 03:57:16] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 03:57:19] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 03:57:27] [valid] Ep. 10 : Up. 40000 : perplexity : 2.43032 : new best
+[2021-05-16 03:57:28] [valid] Ep. 10 : Up. 40000 : cross-entropy : 8.45452 : new best
+[2021-05-16 04:11:22] Seen 4661098 samples
+[2021-05-16 04:11:22] Starting data epoch 11 in logical epoch 11
+[2021-05-16 04:11:22] [data] Shuffling data
+[2021-05-16 04:11:25] [data] Done reading 4,661,110 sentences
+[2021-05-16 04:11:43] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 04:38:57] Ep. 11 : Up. 45000 : Sen. 3,683,266 : Cost 2.59778500 * 109,597,221 @ 21,890 after 986,644,254 : Time 2505.61s : 43740.77 words/s : L.r. 1.7889e-04
+[2021-05-16 04:38:57] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 04:39:00] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter45000.npz
+[2021-05-16 04:39:01] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 04:39:04] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 04:39:11] [valid] Ep. 11 : Up. 45000 : perplexity : 2.39526 : new best
+[2021-05-16 04:39:12] [valid] Ep. 11 : Up. 45000 : cross-entropy : 8.31619 : new best
+[2021-05-16 04:46:29] Seen 4661098 samples
+[2021-05-16 04:46:29] Starting data epoch 12 in logical epoch 12
+[2021-05-16 04:46:29] [data] Shuffling data
+[2021-05-16 04:46:32] [data] Done reading 4,661,110 sentences
+[2021-05-16 04:46:50] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 05:20:56] Ep. 12 : Up. 50000 : Sen. 4,620,311 : Cost 2.56708407 * 109,719,186 @ 22,497 after 1,096,363,440 : Time 2518.62s : 43563.15 words/s : L.r. 1.6971e-04
+[2021-05-16 05:20:56] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 05:20:58] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter50000.npz
+[2021-05-16 05:21:00] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 05:21:03] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 05:21:09] [valid] Ep. 12 : Up. 50000 : perplexity : 2.36826 : new best
+[2021-05-16 05:21:10] [valid] Ep. 12 : Up. 50000 : cross-entropy : 8.20824 : new best
+[2021-05-16 05:21:32] Seen 4661098 samples
+[2021-05-16 05:21:32] Starting data epoch 13 in logical epoch 13
+[2021-05-16 05:21:32] [data] Shuffling data
+[2021-05-16 05:21:35] [data] Done reading 4,661,110 sentences
+[2021-05-16 05:21:52] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 05:55:50] Seen 4661098 samples
+[2021-05-16 05:55:50] Starting data epoch 14 in logical epoch 14
+[2021-05-16 05:55:50] [data] Shuffling data
+[2021-05-16 05:55:52] [data] Done reading 4,661,110 sentences
+[2021-05-16 05:56:10] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 06:02:40] Ep. 14 : Up. 55000 : Sen. 870,879 : Cost 2.53757143 * 109,430,600 @ 31,008 after 1,205,794,040 : Time 2503.97s : 43702.76 words/s : L.r. 1.6181e-04
+[2021-05-16 06:02:40] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 06:02:45] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter55000.npz
+[2021-05-16 06:02:46] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 06:02:51] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 06:02:59] [valid] Ep. 14 : Up. 55000 : perplexity : 2.3487 : new best
+[2021-05-16 06:03:00] [valid] Ep. 14 : Up. 55000 : cross-entropy : 8.12931 : new best
+[2021-05-16 06:30:46] Seen 4661098 samples
+[2021-05-16 06:30:46] Starting data epoch 15 in logical epoch 15
+[2021-05-16 06:30:46] [data] Shuffling data
+[2021-05-16 06:30:49] [data] Done reading 4,661,110 sentences
+[2021-05-16 06:31:07] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 06:44:20] Ep. 15 : Up. 60000 : Sen. 1,795,924 : Cost 2.51777577 * 109,394,116 @ 21,824 after 1,315,188,156 : Time 2500.52s : 43748.57 words/s : L.r. 1.5492e-04
+[2021-05-16 06:44:20] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 06:44:24] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter60000.npz
+[2021-05-16 06:44:26] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 06:44:30] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 06:44:39] [valid] Ep. 15 : Up. 60000 : perplexity : 2.33434 : new best
+[2021-05-16 06:44:40] [valid] Ep. 15 : Up. 60000 : cross-entropy : 8.0709 : new best
+[2021-05-16 07:05:36] Seen 4661098 samples
+[2021-05-16 07:05:36] Starting data epoch 16 in logical epoch 16
+[2021-05-16 07:05:36] [data] Shuffling data
+[2021-05-16 07:05:39] [data] Done reading 4,661,110 sentences
+[2021-05-16 07:05:56] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 07:25:45] Ep. 16 : Up. 65000 : Sen. 2,720,453 : Cost 2.50224948 * 109,551,877 @ 29,574 after 1,424,740,033 : Time 2484.30s : 44097.61 words/s : L.r. 1.4884e-04
+[2021-05-16 07:25:45] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 07:25:48] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter65000.npz
+[2021-05-16 07:25:49] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 07:25:52] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 07:25:59] [valid] Ep. 16 : Up. 65000 : perplexity : 2.32158 : new best
+[2021-05-16 07:25:59] [valid] Ep. 16 : Up. 65000 : cross-entropy : 8.01874 : new best
+[2021-05-16 07:40:15] Seen 4661098 samples
+[2021-05-16 07:40:15] Starting data epoch 17 in logical epoch 17
+[2021-05-16 07:40:15] [data] Shuffling data
+[2021-05-16 07:40:18] [data] Done reading 4,661,110 sentences
+[2021-05-16 07:40:35] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 08:07:05] Ep. 17 : Up. 70000 : Sen. 3,653,366 : Cost 2.48583698 * 109,655,603 @ 29,520 after 1,534,395,636 : Time 2480.41s : 44208.71 words/s : L.r. 1.4343e-04
+[2021-05-16 08:07:05] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 08:07:08] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter70000.npz
+[2021-05-16 08:07:09] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 08:07:12] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 08:07:19] [valid] Ep. 17 : Up. 70000 : perplexity : 2.31387 : new best
+[2021-05-16 08:07:20] [valid] Ep. 17 : Up. 70000 : cross-entropy : 7.98702 : new best
+[2021-05-16 08:14:56] Seen 4661098 samples
+[2021-05-16 08:14:56] Starting data epoch 18 in logical epoch 18
+[2021-05-16 08:14:56] [data] Shuffling data
+[2021-05-16 08:14:59] [data] Done reading 4,661,110 sentences
+[2021-05-16 08:15:17] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 08:48:39] Ep. 18 : Up. 75000 : Sen. 4,580,486 : Cost 2.47243619 * 109,682,152 @ 23,616 after 1,644,077,788 : Time 2494.38s : 43971.73 words/s : L.r. 1.3856e-04
+[2021-05-16 08:48:39] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 08:48:42] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter75000.npz
+[2021-05-16 08:48:44] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 08:48:46] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 08:48:53] [valid] Ep. 18 : Up. 75000 : perplexity : 2.30503 : new best
+[2021-05-16 08:48:54] [valid] Ep. 18 : Up. 75000 : cross-entropy : 7.95059 : new best
+[2021-05-16 08:49:37] Seen 4661098 samples
+[2021-05-16 08:49:37] Starting data epoch 19 in logical epoch 19
+[2021-05-16 08:49:37] [data] Shuffling data
+[2021-05-16 08:49:40] [data] Done reading 4,661,110 sentences
+[2021-05-16 08:49:58] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 09:23:46] Seen 4661098 samples
+[2021-05-16 09:23:46] Starting data epoch 20 in logical epoch 20
+[2021-05-16 09:23:46] [data] Shuffling data
+[2021-05-16 09:23:48] [data] Done reading 4,661,110 sentences
+[2021-05-16 09:24:06] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 09:30:03] Ep. 20 : Up. 80000 : Sen. 818,920 : Cost 2.45603442 * 109,053,857 @ 21,996 after 1,753,131,645 : Time 2483.80s : 43906.10 words/s : L.r. 1.3416e-04
+[2021-05-16 09:30:03] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 09:30:06] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter80000.npz
+[2021-05-16 09:30:07] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 09:30:10] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 09:30:17] [valid] Ep. 20 : Up. 80000 : perplexity : 2.29958 : new best
+[2021-05-16 09:30:18] [valid] Ep. 20 : Up. 80000 : cross-entropy : 7.92808 : new best
+[2021-05-16 09:58:27] Seen 4661098 samples
+[2021-05-16 09:58:27] Starting data epoch 21 in logical epoch 21
+[2021-05-16 09:58:27] [data] Shuffling data
+[2021-05-16 09:58:31] [data] Done reading 4,661,110 sentences
+[2021-05-16 09:58:49] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 10:11:15] Ep. 21 : Up. 85000 : Sen. 1,741,090 : Cost 2.44520926 * 109,602,264 @ 6,300 after 1,862,733,909 : Time 2471.69s : 44343.04 words/s : L.r. 1.3016e-04
+[2021-05-16 10:11:15] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 10:11:18] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter85000.npz
+[2021-05-16 10:11:19] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 10:11:22] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 10:11:29] [valid] Ep. 21 : Up. 85000 : perplexity : 2.29482 : new best
+[2021-05-16 10:11:30] [valid] Ep. 21 : Up. 85000 : cross-entropy : 7.90834 : new best
+[2021-05-16 10:32:38] Seen 4661098 samples
+[2021-05-16 10:32:38] Starting data epoch 22 in logical epoch 22
+[2021-05-16 10:32:38] [data] Shuffling data
+[2021-05-16 10:32:42] [data] Done reading 4,661,110 sentences
+[2021-05-16 10:33:00] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 10:52:22] Ep. 22 : Up. 90000 : Sen. 2,671,405 : Cost 2.43714333 * 109,434,505 @ 21,648 after 1,972,168,414 : Time 2466.90s : 44361.15 words/s : L.r. 1.2649e-04
+[2021-05-16 10:52:22] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 10:52:26] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter90000.npz
+[2021-05-16 10:52:28] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 10:52:31] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 10:52:38] [valid] Ep. 22 : Up. 90000 : perplexity : 2.28908 : new best
+[2021-05-16 10:52:39] [valid] Ep. 22 : Up. 90000 : cross-entropy : 7.8845 : new best
+[2021-05-16 11:07:14] Seen 4661098 samples
+[2021-05-16 11:07:14] Starting data epoch 23 in logical epoch 23
+[2021-05-16 11:07:14] [data] Shuffling data
+[2021-05-16 11:07:17] [data] Done reading 4,661,110 sentences
+[2021-05-16 11:07:35] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 11:33:25] Ep. 23 : Up. 95000 : Sen. 3,590,952 : Cost 2.42784715 * 109,659,848 @ 22,584 after 2,081,828,262 : Time 2463.28s : 44517.81 words/s : L.r. 1.2312e-04
+[2021-05-16 11:33:25] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 11:33:28] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter95000.npz
+[2021-05-16 11:33:29] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 11:33:32] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 11:33:39] [valid] Ep. 23 : Up. 95000 : perplexity : 2.28622 : new best
+[2021-05-16 11:33:40] [valid] Ep. 23 : Up. 95000 : cross-entropy : 7.87261 : new best
+[2021-05-16 11:41:37] Seen 4661098 samples
+[2021-05-16 11:41:37] Starting data epoch 24 in logical epoch 24
+[2021-05-16 11:41:37] [data] Shuffling data
+[2021-05-16 11:41:41] [data] Done reading 4,661,110 sentences
+[2021-05-16 11:41:58] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 12:15:04] Ep. 24 : Up. 100000 : Sen. 4,543,984 : Cost 2.42005825 * 109,810,472 @ 13,910 after 2,191,638,734 : Time 2498.70s : 43947.13 words/s : L.r. 1.2000e-04
+[2021-05-16 12:15:04] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 12:15:06] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter100000.npz
+[2021-05-16 12:15:08] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 12:15:11] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 12:15:18] [valid] Ep. 24 : Up. 100000 : perplexity : 2.28281 : new best
+[2021-05-16 12:15:19] [valid] Ep. 24 : Up. 100000 : cross-entropy : 7.85836 : new best
+[2021-05-16 12:16:25] Seen 4661098 samples
+[2021-05-16 12:16:25] Starting data epoch 25 in logical epoch 25
+[2021-05-16 12:16:25] [data] Shuffling data
+[2021-05-16 12:16:28] [data] Done reading 4,661,110 sentences
+[2021-05-16 12:16:45] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 12:50:44] Seen 4661098 samples
+[2021-05-16 12:50:44] Starting data epoch 26 in logical epoch 26
+[2021-05-16 12:50:44] [data] Shuffling data
+[2021-05-16 12:50:46] [data] Done reading 4,661,110 sentences
+[2021-05-16 12:51:04] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 12:56:48] Ep. 26 : Up. 105000 : Sen. 767,478 : Cost 2.40830374 * 109,072,597 @ 29,520 after 2,300,711,331 : Time 2504.17s : 43556.46 words/s : L.r. 1.1711e-04
+[2021-05-16 12:56:48] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 12:56:51] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter105000.npz
+[2021-05-16 12:56:52] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 12:56:55] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 12:57:02] [valid] Ep. 26 : Up. 105000 : perplexity : 2.28104 : new best
+[2021-05-16 12:57:02] [valid] Ep. 26 : Up. 105000 : cross-entropy : 7.85101 : new best
+[2021-05-16 13:25:26] Seen 4661098 samples
+[2021-05-16 13:25:26] Starting data epoch 27 in logical epoch 27
+[2021-05-16 13:25:26] [data] Shuffling data
+[2021-05-16 13:25:29] [data] Done reading 4,661,110 sentences
+[2021-05-16 13:25:46] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 13:38:12] Ep. 27 : Up. 110000 : Sen. 1,698,644 : Cost 2.40132880 * 109,580,287 @ 21,975 after 2,410,291,618 : Time 2483.97s : 44114.97 words/s : L.r. 1.1442e-04
+[2021-05-16 13:38:12] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 13:38:15] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter110000.npz
+[2021-05-16 13:38:16] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 13:38:19] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 13:38:26] [valid] Ep. 27 : Up. 110000 : perplexity : 2.27861 : new best
+[2021-05-16 13:38:27] [valid] Ep. 27 : Up. 110000 : cross-entropy : 7.84087 : new best
+[2021-05-16 14:00:02] Seen 4661098 samples
+[2021-05-16 14:00:02] Starting data epoch 28 in logical epoch 28
+[2021-05-16 14:00:02] [data] Shuffling data
+[2021-05-16 14:00:05] [data] Done reading 4,661,110 sentences
+[2021-05-16 14:00:23] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 14:19:25] Ep. 28 : Up. 115000 : Sen. 2,605,130 : Cost 2.39638734 * 109,468,825 @ 32,436 after 2,519,760,443 : Time 2473.11s : 44263.56 words/s : L.r. 1.1190e-04
+[2021-05-16 14:19:25] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 14:19:28] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter115000.npz
+[2021-05-16 14:19:29] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 14:19:32] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 14:19:38] [valid] Ep. 28 : Up. 115000 : perplexity : 2.27777 : new best
+[2021-05-16 14:19:39] [valid] Ep. 28 : Up. 115000 : cross-entropy : 7.83735 : new best
+[2021-05-16 14:34:41] Seen 4661098 samples
+[2021-05-16 14:34:41] Starting data epoch 29 in logical epoch 29
+[2021-05-16 14:34:41] [data] Shuffling data
+[2021-05-16 14:34:45] [data] Done reading 4,661,110 sentences
+[2021-05-16 14:35:02] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 15:00:54] Ep. 29 : Up. 120000 : Sen. 3,552,597 : Cost 2.39004230 * 109,733,150 @ 35,982 after 2,629,493,593 : Time 2489.41s : 44079.93 words/s : L.r. 1.0954e-04
+[2021-05-16 15:00:54] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 15:00:57] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter120000.npz
+[2021-05-16 15:00:58] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 15:01:01] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 15:01:08] [valid] Ep. 29 : Up. 120000 : perplexity : 2.27646 : new best
+[2021-05-16 15:01:09] [valid] Ep. 29 : Up. 120000 : cross-entropy : 7.83187 : new best
+[2021-05-16 15:09:23] Seen 4661098 samples
+[2021-05-16 15:09:23] Starting data epoch 30 in logical epoch 30
+[2021-05-16 15:09:23] [data] Shuffling data
+[2021-05-16 15:09:26] [data] Done reading 4,661,110 sentences
+[2021-05-16 15:09:44] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 15:42:08] Ep. 30 : Up. 125000 : Sen. 4,474,093 : Cost 2.38554645 * 109,745,267 @ 28,424 after 2,739,238,860 : Time 2473.99s : 44359.60 words/s : L.r. 1.0733e-04
+[2021-05-16 15:42:08] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 15:42:11] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter125000.npz
+[2021-05-16 15:42:12] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 15:42:15] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 15:42:22] [valid] Ep. 30 : Up. 125000 : perplexity : 2.27458 : new best
+[2021-05-16 15:42:22] [valid] Ep. 30 : Up. 125000 : cross-entropy : 7.82399 : new best
+[2021-05-16 15:43:50] Seen 4661098 samples
+[2021-05-16 15:43:50] Starting data epoch 31 in logical epoch 31
+[2021-05-16 15:43:50] [data] Shuffling data
+[2021-05-16 15:43:52] [data] Done reading 4,661,110 sentences
+[2021-05-16 15:44:10] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 16:16:15] Seen 4661098 samples
+[2021-05-16 16:16:15] Starting data epoch 32 in logical epoch 32
+[2021-05-16 16:16:15] [data] Shuffling data
+[2021-05-16 16:16:17] [data] Done reading 4,661,110 sentences
+[2021-05-16 16:16:35] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 16:21:27] Ep. 32 : Up. 130000 : Sen. 734,686 : Cost 2.37577343 * 109,325,553 @ 25,676 after 2,848,564,413 : Time 2358.48s : 46354.25 words/s : L.r. 1.0525e-04
+[2021-05-16 16:21:27] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 16:21:30] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter130000.npz
+[2021-05-16 16:21:31] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 16:21:34] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 16:21:40] [valid] Ep. 32 : Up. 130000 : perplexity : 2.2724 : new best
+[2021-05-16 16:21:41] [valid] Ep. 32 : Up. 130000 : cross-entropy : 7.81485 : new best
+[2021-05-16 16:46:15] Seen 4661098 samples
+[2021-05-16 16:46:15] Starting data epoch 33 in logical epoch 33
+[2021-05-16 16:46:15] [data] Shuffling data
+[2021-05-16 16:46:18] [data] Done reading 4,661,110 sentences
+[2021-05-16 16:46:36] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 16:56:49] Ep. 33 : Up. 135000 : Sen. 1,642,999 : Cost 2.37031293 * 109,303,590 @ 10,440 after 2,957,868,003 : Time 2122.22s : 51504.27 words/s : L.r. 1.0328e-04
+[2021-05-16 16:56:49] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 16:56:53] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter135000.npz
+[2021-05-16 16:56:55] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 16:56:58] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 16:57:05] [valid] Ep. 33 : Up. 135000 : perplexity : 2.27154 : new best
+[2021-05-16 16:57:06] [valid] Ep. 33 : Up. 135000 : cross-entropy : 7.81128 : new best
+[2021-05-16 17:15:44] Seen 4661098 samples
+[2021-05-16 17:15:44] Starting data epoch 34 in logical epoch 34
+[2021-05-16 17:15:44] [data] Shuffling data
+[2021-05-16 17:15:47] [data] Done reading 4,661,110 sentences
+[2021-05-16 17:16:05] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 17:32:05] Ep. 34 : Up. 140000 : Sen. 2,591,648 : Cost 2.36762691 * 109,926,004 @ 18,869 after 3,067,794,007 : Time 2115.74s : 51956.33 words/s : L.r. 1.0142e-04
+[2021-05-16 17:32:05] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 17:32:10] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter140000.npz
+[2021-05-16 17:32:12] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 17:32:17] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 17:32:28] [valid] Ep. 34 : Up. 140000 : perplexity : 2.27002 : new best
+[2021-05-16 17:32:29] [valid] Ep. 34 : Up. 140000 : cross-entropy : 7.80487 : new best
+[2021-05-16 17:45:21] Seen 4661098 samples
+[2021-05-16 17:45:21] Starting data epoch 35 in logical epoch 35
+[2021-05-16 17:45:21] [data] Shuffling data
+[2021-05-16 17:45:24] [data] Done reading 4,661,110 sentences
+[2021-05-16 17:45:42] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 18:07:10] Ep. 35 : Up. 145000 : Sen. 3,515,890 : Cost 2.36389923 * 109,690,780 @ 30,528 after 3,177,484,787 : Time 2104.76s : 52115.64 words/s : L.r. 9.9655e-05
+[2021-05-16 18:07:10] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 18:07:14] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter145000.npz
+[2021-05-16 18:07:15] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 18:07:19] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 18:07:27] [valid] Ep. 35 : Up. 145000 : perplexity : 2.26863 : new best
+[2021-05-16 18:07:28] [valid] Ep. 35 : Up. 145000 : cross-entropy : 7.79905 : new best
+[2021-05-16 18:14:44] Seen 4661098 samples
+[2021-05-16 18:14:44] Starting data epoch 36 in logical epoch 36
+[2021-05-16 18:14:44] [data] Shuffling data
+[2021-05-16 18:14:47] [data] Done reading 4,661,110 sentences
+[2021-05-16 18:15:05] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 18:42:20] Ep. 36 : Up. 150000 : Sen. 4,430,108 : Cost 2.35931993 * 109,534,101 @ 19,680 after 3,287,018,888 : Time 2110.67s : 51895.46 words/s : L.r. 9.7980e-05
+[2021-05-16 18:42:20] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 18:42:24] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter150000.npz
+[2021-05-16 18:42:25] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 18:42:28] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 18:42:34] [valid] Ep. 36 : Up. 150000 : perplexity : 2.26877 : stalled 1 times (last best: 2.26863)
+[2021-05-16 18:42:35] [valid] Ep. 36 : Up. 150000 : cross-entropy : 7.79965 : stalled 1 times (last best: 7.79905)
+[2021-05-16 18:44:04] Seen 4661098 samples
+[2021-05-16 18:44:04] Starting data epoch 37 in logical epoch 37
+[2021-05-16 18:44:04] [data] Shuffling data
+[2021-05-16 18:44:07] [data] Done reading 4,661,110 sentences
+[2021-05-16 18:44:25] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 19:13:00] Seen 4661098 samples
+[2021-05-16 19:13:00] Starting data epoch 38 in logical epoch 38
+[2021-05-16 19:13:00] [data] Shuffling data
+[2021-05-16 19:13:02] [data] Done reading 4,661,110 sentences
+[2021-05-16 19:13:20] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 19:17:39] Ep. 38 : Up. 155000 : Sen. 696,508 : Cost 2.35198236 * 109,198,137 @ 17,800 after 3,396,217,025 : Time 2119.13s : 51529.73 words/s : L.r. 9.6386e-05
+[2021-05-16 19:17:39] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 19:17:42] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter155000.npz
+[2021-05-16 19:17:43] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 19:17:46] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 19:17:53] [valid] Ep. 38 : Up. 155000 : perplexity : 2.26871 : stalled 2 times (last best: 2.26863)
+[2021-05-16 19:17:54] [valid] Ep. 38 : Up. 155000 : cross-entropy : 7.79938 : stalled 2 times (last best: 7.79905)
+[2021-05-16 19:41:49] Seen 4661098 samples
+[2021-05-16 19:41:49] Starting data epoch 39 in logical epoch 39
+[2021-05-16 19:41:49] [data] Shuffling data
+[2021-05-16 19:41:53] [data] Done reading 4,661,110 sentences
+[2021-05-16 19:42:11] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 19:52:05] Ep. 39 : Up. 160000 : Sen. 1,606,924 : Cost 2.34871697 * 109,449,694 @ 31,008 after 3,505,666,719 : Time 2065.93s : 52978.46 words/s : L.r. 9.4868e-05
+[2021-05-16 19:52:05] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 19:52:08] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter160000.npz
+[2021-05-16 19:52:09] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 19:52:12] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 19:52:19] [valid] Ep. 39 : Up. 160000 : perplexity : 2.26783 : new best
+[2021-05-16 19:52:19] [valid] Ep. 39 : Up. 160000 : cross-entropy : 7.79568 : new best
+[2021-05-16 20:10:52] Seen 4661098 samples
+[2021-05-16 20:10:52] Starting data epoch 40 in logical epoch 40
+[2021-05-16 20:10:52] [data] Shuffling data
+[2021-05-16 20:10:55] [data] Done reading 4,661,110 sentences
+[2021-05-16 20:11:13] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 20:26:57] Ep. 40 : Up. 165000 : Sen. 2,541,048 : Cost 2.34503651 * 109,788,610 @ 7,830 after 3,615,455,329 : Time 2091.46s : 52493.82 words/s : L.r. 9.3420e-05
+[2021-05-16 20:26:57] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 20:26:59] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter165000.npz
+[2021-05-16 20:27:01] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 20:27:03] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 20:27:10] [valid] Ep. 40 : Up. 165000 : perplexity : 2.2687 : stalled 1 times (last best: 2.26783)
+[2021-05-16 20:27:11] [valid] Ep. 40 : Up. 165000 : cross-entropy : 7.79937 : stalled 1 times (last best: 7.79568)
+[2021-05-16 20:40:31] Seen 4661098 samples
+[2021-05-16 20:40:31] Starting data epoch 41 in logical epoch 41
+[2021-05-16 20:40:31] [data] Shuffling data
+[2021-05-16 20:40:34] [data] Done reading 4,661,110 sentences
+[2021-05-16 20:40:51] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 21:02:51] Ep. 41 : Up. 170000 : Sen. 3,457,916 : Cost 2.34338737 * 109,498,096 @ 14,400 after 3,724,953,425 : Time 2154.64s : 50819.68 words/s : L.r. 9.2036e-05
+[2021-05-16 21:02:51] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 21:02:54] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter170000.npz
+[2021-05-16 21:02:55] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 21:02:58] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 21:03:05] [valid] Ep. 41 : Up. 170000 : perplexity : 2.2691 : stalled 2 times (last best: 2.26783)
+[2021-05-16 21:03:06] [valid] Ep. 41 : Up. 170000 : cross-entropy : 7.80103 : stalled 2 times (last best: 7.79568)
+[2021-05-16 21:10:50] Seen 4661098 samples
+[2021-05-16 21:10:50] Starting data epoch 42 in logical epoch 42
+[2021-05-16 21:10:50] [data] Shuffling data
+[2021-05-16 21:10:53] [data] Done reading 4,661,110 sentences
+[2021-05-16 21:11:10] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 21:38:42] Ep. 42 : Up. 175000 : Sen. 4,412,735 : Cost 2.34117579 * 110,078,389 @ 26,712 after 3,835,031,814 : Time 2150.18s : 51194.97 words/s : L.r. 9.0711e-05
+[2021-05-16 21:38:42] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 21:38:47] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter175000.npz
+[2021-05-16 21:38:49] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 21:38:53] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 21:39:02] [valid] Ep. 42 : Up. 175000 : perplexity : 2.26857 : stalled 3 times (last best: 2.26783)
+[2021-05-16 21:39:03] [valid] Ep. 42 : Up. 175000 : cross-entropy : 7.7988 : stalled 3 times (last best: 7.79568)
+[2021-05-16 21:40:42] Seen 4661098 samples
+[2021-05-16 21:40:42] Starting data epoch 43 in logical epoch 43
+[2021-05-16 21:40:42] [data] Shuffling data
+[2021-05-16 21:40:45] [data] Done reading 4,661,110 sentences
+[2021-05-16 21:41:04] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 22:10:34] Seen 4661098 samples
+[2021-05-16 22:10:34] Starting data epoch 44 in logical epoch 44
+[2021-05-16 22:10:34] [data] Shuffling data
+[2021-05-16 22:10:37] [data] Done reading 4,661,110 sentences
+[2021-05-16 22:10:54] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 22:15:03] Ep. 44 : Up. 180000 : Sen. 641,320 : Cost 2.33303595 * 108,885,947 @ 21,648 after 3,943,917,761 : Time 2181.67s : 49909.44 words/s : L.r. 8.9443e-05
+[2021-05-16 22:15:03] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 22:15:06] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter180000.npz
+[2021-05-16 22:15:08] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 22:15:11] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 22:15:18] [valid] Ep. 44 : Up. 180000 : perplexity : 2.26796 : stalled 4 times (last best: 2.26783)
+[2021-05-16 22:15:19] [valid] Ep. 44 : Up. 180000 : cross-entropy : 7.79625 : stalled 4 times (last best: 7.79568)
+[2021-05-16 22:40:20] Seen 4661098 samples
+[2021-05-16 22:40:20] Starting data epoch 45 in logical epoch 45
+[2021-05-16 22:40:20] [data] Shuffling data
+[2021-05-16 22:40:23] [data] Done reading 4,661,110 sentences
+[2021-05-16 22:40:41] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 22:50:31] Ep. 45 : Up. 185000 : Sen. 1,568,533 : Cost 2.33056903 * 109,559,592 @ 29,716 after 4,053,477,353 : Time 2127.66s : 51493.04 words/s : L.r. 8.8226e-05
+[2021-05-16 22:50:31] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 22:50:35] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter185000.npz
+[2021-05-16 22:50:37] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 22:50:39] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 22:50:46] [valid] Ep. 45 : Up. 185000 : perplexity : 2.26829 : stalled 5 times (last best: 2.26783)
+[2021-05-16 22:50:47] [valid] Ep. 45 : Up. 185000 : cross-entropy : 7.79763 : stalled 5 times (last best: 7.79568)
+[2021-05-16 23:10:31] Seen 4661098 samples
+[2021-05-16 23:10:31] Starting data epoch 46 in logical epoch 46
+[2021-05-16 23:10:31] [data] Shuffling data
+[2021-05-16 23:10:34] [data] Done reading 4,661,110 sentences
+[2021-05-16 23:10:51] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-16 23:26:53] Ep. 46 : Up. 190000 : Sen. 2,501,914 : Cost 2.32959342 * 109,827,603 @ 27,666 after 4,163,304,956 : Time 2181.65s : 50341.52 words/s : L.r. 8.7057e-05
+[2021-05-16 23:26:53] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-16 23:26:55] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter190000.npz
+[2021-05-16 23:26:57] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-16 23:27:00] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-16 23:27:06] [valid] Ep. 46 : Up. 190000 : perplexity : 2.26964 : stalled 6 times (last best: 2.26783)
+[2021-05-16 23:27:07] [valid] Ep. 46 : Up. 190000 : cross-entropy : 7.80329 : stalled 6 times (last best: 7.79568)
+[2021-05-16 23:40:41] Seen 4661098 samples
+[2021-05-16 23:40:41] Starting data epoch 47 in logical epoch 47
+[2021-05-16 23:40:41] [data] Shuffling data
+[2021-05-16 23:40:44] [data] Done reading 4,661,110 sentences
+[2021-05-16 23:41:01] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-17 00:02:44] Ep. 47 : Up. 195000 : Sen. 3,430,056 : Cost 2.32747149 * 109,564,059 @ 19,440 after 4,272,869,015 : Time 2151.07s : 50934.62 words/s : L.r. 8.5934e-05
+[2021-05-17 00:02:44] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-17 00:02:49] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter195000.npz
+[2021-05-17 00:02:51] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-17 00:02:54] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-17 00:03:01] [valid] Ep. 47 : Up. 195000 : perplexity : 2.27063 : stalled 7 times (last best: 2.26783)
+[2021-05-17 00:03:02] [valid] Ep. 47 : Up. 195000 : cross-entropy : 7.80744 : stalled 7 times (last best: 7.79568)
+[2021-05-17 00:10:57] Seen 4661098 samples
+[2021-05-17 00:10:57] Starting data epoch 48 in logical epoch 48
+[2021-05-17 00:10:57] [data] Shuffling data
+[2021-05-17 00:11:00] [data] Done reading 4,661,110 sentences
+[2021-05-17 00:11:18] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-17 00:38:25] Ep. 48 : Up. 200000 : Sen. 4,359,961 : Cost 2.32485819 * 109,647,808 @ 30,229 after 4,382,516,823 : Time 2141.28s : 51206.63 words/s : L.r. 8.4853e-05
+[2021-05-17 00:38:25] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-17 00:38:28] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter200000.npz
+[2021-05-17 00:38:29] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-17 00:38:32] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-17 00:38:38] [valid] Ep. 48 : Up. 200000 : perplexity : 2.27014 : stalled 8 times (last best: 2.26783)
+[2021-05-17 00:38:39] [valid] Ep. 48 : Up. 200000 : cross-entropy : 7.8054 : stalled 8 times (last best: 7.79568)
+[2021-05-17 00:40:43] Seen 4661098 samples
+[2021-05-17 00:40:43] Starting data epoch 49 in logical epoch 49
+[2021-05-17 00:40:43] [data] Shuffling data
+[2021-05-17 00:40:46] [data] Done reading 4,661,110 sentences
+[2021-05-17 00:41:03] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-17 01:10:31] Seen 4661098 samples
+[2021-05-17 01:10:31] Starting data epoch 50 in logical epoch 50
+[2021-05-17 01:10:31] [data] Shuffling data
+[2021-05-17 01:10:33] [data] Done reading 4,661,110 sentences
+[2021-05-17 01:10:51] [data] Done shuffling 4,661,110 sentences to temp files
+[2021-05-17 01:14:41] Ep. 50 : Up. 205000 : Sen. 598,268 : Cost 2.31970525 * 109,051,187 @ 33,456 after 4,491,568,010 : Time 2176.09s : 50113.40 words/s : L.r. 8.3812e-05
+[2021-05-17 01:14:41] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-17 01:14:45] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.iter205000.npz
+[2021-05-17 01:14:46] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-17 01:14:49] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz
+[2021-05-17 01:14:56] [valid] Ep. 50 : Up. 205000 : perplexity : 2.27119 : stalled 9 times (last best: 2.26783)
+[2021-05-17 01:14:57] [valid] Ep. 50 : Up. 205000 : cross-entropy : 7.8098 : stalled 9 times (last best: 7.79568)
+[2021-05-17 01:40:41] Seen 4661098 samples
+[2021-05-17 01:40:41] Starting data epoch 51 in logical epoch 51
+[2021-05-17 01:40:41] Training finished
+[2021-05-17 01:40:43] [valid] Ep. 51 : Up. 208633 : perplexity : 2.27148 : stalled 10 times (last best: 2.26783)
+[2021-05-17 01:40:44] [valid] Ep. 51 : Up. 208633 : cross-entropy : 7.81102 : stalled 10 times (last best: 7.79568)
+[2021-05-17 01:40:45] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.orig.npz
+[2021-05-17 01:40:48] Saving model weights and runtime parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz
+[2021-05-17 01:40:50] Saving Adam parameters to /tank/models/translation/cheepl/isl_eng__all__1/model.npz.optimizer.npz

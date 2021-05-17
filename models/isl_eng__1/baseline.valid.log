@@ -1,0 +1,84 @@
+[2021-05-15 23:04:41] [valid] Ep. 2 : Up. 5000 : perplexity : 30.9794 : new best
+[2021-05-15 23:04:42] [valid] Ep. 2 : Up. 5000 : cross-entropy : 32.6873 : new best
+[2021-05-15 23:46:22] [valid] Ep. 3 : Up. 10000 : perplexity : 5.51829 : new best
+[2021-05-15 23:46:22] [valid] Ep. 3 : Up. 10000 : cross-entropy : 16.2619 : new best
+[2021-05-16 00:27:55] [valid] Ep. 4 : Up. 15000 : perplexity : 3.42126 : new best
+[2021-05-16 00:27:56] [valid] Ep. 4 : Up. 15000 : cross-entropy : 11.7104 : new best
+[2021-05-16 01:09:55] [valid] Ep. 5 : Up. 20000 : perplexity : 2.88953 : new best
+[2021-05-16 01:09:56] [valid] Ep. 5 : Up. 20000 : cross-entropy : 10.1023 : new best
+[2021-05-16 01:51:31] [valid] Ep. 6 : Up. 25000 : perplexity : 2.66549 : new best
+[2021-05-16 01:51:31] [valid] Ep. 6 : Up. 25000 : cross-entropy : 9.33388 : new best
+[2021-05-16 02:33:38] [valid] Ep. 8 : Up. 30000 : perplexity : 2.54895 : new best
+[2021-05-16 02:33:39] [valid] Ep. 8 : Up. 30000 : cross-entropy : 8.90827 : new best
+[2021-05-16 03:15:23] [valid] Ep. 9 : Up. 35000 : perplexity : 2.47815 : new best
+[2021-05-16 03:15:23] [valid] Ep. 9 : Up. 35000 : cross-entropy : 8.64007 : new best
+[2021-05-16 03:57:27] [valid] Ep. 10 : Up. 40000 : perplexity : 2.43032 : new best
+[2021-05-16 03:57:28] [valid] Ep. 10 : Up. 40000 : cross-entropy : 8.45452 : new best
+[2021-05-16 04:39:11] [valid] Ep. 11 : Up. 45000 : perplexity : 2.39526 : new best
+[2021-05-16 04:39:12] [valid] Ep. 11 : Up. 45000 : cross-entropy : 8.31619 : new best
+[2021-05-16 05:21:09] [valid] Ep. 12 : Up. 50000 : perplexity : 2.36826 : new best
+[2021-05-16 05:21:10] [valid] Ep. 12 : Up. 50000 : cross-entropy : 8.20824 : new best
+[2021-05-16 06:02:59] [valid] Ep. 14 : Up. 55000 : perplexity : 2.3487 : new best
+[2021-05-16 06:03:00] [valid] Ep. 14 : Up. 55000 : cross-entropy : 8.12931 : new best
+[2021-05-16 06:44:39] [valid] Ep. 15 : Up. 60000 : perplexity : 2.33434 : new best
+[2021-05-16 06:44:40] [valid] Ep. 15 : Up. 60000 : cross-entropy : 8.0709 : new best
+[2021-05-16 07:25:59] [valid] Ep. 16 : Up. 65000 : perplexity : 2.32158 : new best
+[2021-05-16 07:25:59] [valid] Ep. 16 : Up. 65000 : cross-entropy : 8.01874 : new best
+[2021-05-16 08:07:19] [valid] Ep. 17 : Up. 70000 : perplexity : 2.31387 : new best
+[2021-05-16 08:07:20] [valid] Ep. 17 : Up. 70000 : cross-entropy : 7.98702 : new best
+[2021-05-16 08:48:53] [valid] Ep. 18 : Up. 75000 : perplexity : 2.30503 : new best
+[2021-05-16 08:48:54] [valid] Ep. 18 : Up. 75000 : cross-entropy : 7.95059 : new best
+[2021-05-16 09:30:17] [valid] Ep. 20 : Up. 80000 : perplexity : 2.29958 : new best
+[2021-05-16 09:30:18] [valid] Ep. 20 : Up. 80000 : cross-entropy : 7.92808 : new best
+[2021-05-16 10:11:29] [valid] Ep. 21 : Up. 85000 : perplexity : 2.29482 : new best
+[2021-05-16 10:11:30] [valid] Ep. 21 : Up. 85000 : cross-entropy : 7.90834 : new best
+[2021-05-16 10:52:38] [valid] Ep. 22 : Up. 90000 : perplexity : 2.28908 : new best
+[2021-05-16 10:52:39] [valid] Ep. 22 : Up. 90000 : cross-entropy : 7.8845 : new best
+[2021-05-16 11:33:39] [valid] Ep. 23 : Up. 95000 : perplexity : 2.28622 : new best
+[2021-05-16 11:33:40] [valid] Ep. 23 : Up. 95000 : cross-entropy : 7.87261 : new best
+[2021-05-16 12:15:18] [valid] Ep. 24 : Up. 100000 : perplexity : 2.28281 : new best
+[2021-05-16 12:15:19] [valid] Ep. 24 : Up. 100000 : cross-entropy : 7.85836 : new best
+[2021-05-16 12:57:02] [valid] Ep. 26 : Up. 105000 : perplexity : 2.28104 : new best
+[2021-05-16 12:57:02] [valid] Ep. 26 : Up. 105000 : cross-entropy : 7.85101 : new best
+[2021-05-16 13:38:26] [valid] Ep. 27 : Up. 110000 : perplexity : 2.27861 : new best
+[2021-05-16 13:38:27] [valid] Ep. 27 : Up. 110000 : cross-entropy : 7.84087 : new best
+[2021-05-16 14:19:38] [valid] Ep. 28 : Up. 115000 : perplexity : 2.27777 : new best
+[2021-05-16 14:19:39] [valid] Ep. 28 : Up. 115000 : cross-entropy : 7.83735 : new best
+[2021-05-16 15:01:08] [valid] Ep. 29 : Up. 120000 : perplexity : 2.27646 : new best
+[2021-05-16 15:01:09] [valid] Ep. 29 : Up. 120000 : cross-entropy : 7.83187 : new best
+[2021-05-16 15:42:22] [valid] Ep. 30 : Up. 125000 : perplexity : 2.27458 : new best
+[2021-05-16 15:42:22] [valid] Ep. 30 : Up. 125000 : cross-entropy : 7.82399 : new best
+[2021-05-16 16:21:40] [valid] Ep. 32 : Up. 130000 : perplexity : 2.2724 : new best
+[2021-05-16 16:21:41] [valid] Ep. 32 : Up. 130000 : cross-entropy : 7.81485 : new best
+[2021-05-16 16:57:05] [valid] Ep. 33 : Up. 135000 : perplexity : 2.27154 : new best
+[2021-05-16 16:57:06] [valid] Ep. 33 : Up. 135000 : cross-entropy : 7.81128 : new best
+[2021-05-16 17:32:28] [valid] Ep. 34 : Up. 140000 : perplexity : 2.27002 : new best
+[2021-05-16 17:32:29] [valid] Ep. 34 : Up. 140000 : cross-entropy : 7.80487 : new best
+[2021-05-16 18:07:27] [valid] Ep. 35 : Up. 145000 : perplexity : 2.26863 : new best
+[2021-05-16 18:07:28] [valid] Ep. 35 : Up. 145000 : cross-entropy : 7.79905 : new best
+[2021-05-16 18:42:34] [valid] Ep. 36 : Up. 150000 : perplexity : 2.26877 : stalled 1 times (last best: 2.26863)
+[2021-05-16 18:42:35] [valid] Ep. 36 : Up. 150000 : cross-entropy : 7.79965 : stalled 1 times (last best: 7.79905)
+[2021-05-16 19:17:53] [valid] Ep. 38 : Up. 155000 : perplexity : 2.26871 : stalled 2 times (last best: 2.26863)
+[2021-05-16 19:17:54] [valid] Ep. 38 : Up. 155000 : cross-entropy : 7.79938 : stalled 2 times (last best: 7.79905)
+[2021-05-16 19:52:19] [valid] Ep. 39 : Up. 160000 : perplexity : 2.26783 : new best
+[2021-05-16 19:52:19] [valid] Ep. 39 : Up. 160000 : cross-entropy : 7.79568 : new best
+[2021-05-16 20:27:10] [valid] Ep. 40 : Up. 165000 : perplexity : 2.2687 : stalled 1 times (last best: 2.26783)
+[2021-05-16 20:27:11] [valid] Ep. 40 : Up. 165000 : cross-entropy : 7.79937 : stalled 1 times (last best: 7.79568)
+[2021-05-16 21:03:05] [valid] Ep. 41 : Up. 170000 : perplexity : 2.2691 : stalled 2 times (last best: 2.26783)
+[2021-05-16 21:03:06] [valid] Ep. 41 : Up. 170000 : cross-entropy : 7.80103 : stalled 2 times (last best: 7.79568)
+[2021-05-16 21:39:02] [valid] Ep. 42 : Up. 175000 : perplexity : 2.26857 : stalled 3 times (last best: 2.26783)
+[2021-05-16 21:39:03] [valid] Ep. 42 : Up. 175000 : cross-entropy : 7.7988 : stalled 3 times (last best: 7.79568)
+[2021-05-16 22:15:18] [valid] Ep. 44 : Up. 180000 : perplexity : 2.26796 : stalled 4 times (last best: 2.26783)
+[2021-05-16 22:15:19] [valid] Ep. 44 : Up. 180000 : cross-entropy : 7.79625 : stalled 4 times (last best: 7.79568)
+[2021-05-16 22:50:46] [valid] Ep. 45 : Up. 185000 : perplexity : 2.26829 : stalled 5 times (last best: 2.26783)
+[2021-05-16 22:50:47] [valid] Ep. 45 : Up. 185000 : cross-entropy : 7.79763 : stalled 5 times (last best: 7.79568)
+[2021-05-16 23:27:06] [valid] Ep. 46 : Up. 190000 : perplexity : 2.26964 : stalled 6 times (last best: 2.26783)
+[2021-05-16 23:27:07] [valid] Ep. 46 : Up. 190000 : cross-entropy : 7.80329 : stalled 6 times (last best: 7.79568)
+[2021-05-17 00:03:01] [valid] Ep. 47 : Up. 195000 : perplexity : 2.27063 : stalled 7 times (last best: 2.26783)
+[2021-05-17 00:03:02] [valid] Ep. 47 : Up. 195000 : cross-entropy : 7.80744 : stalled 7 times (last best: 7.79568)
+[2021-05-17 00:38:38] [valid] Ep. 48 : Up. 200000 : perplexity : 2.27014 : stalled 8 times (last best: 2.26783)
+[2021-05-17 00:38:39] [valid] Ep. 48 : Up. 200000 : cross-entropy : 7.8054 : stalled 8 times (last best: 7.79568)
+[2021-05-17 01:14:56] [valid] Ep. 50 : Up. 205000 : perplexity : 2.27119 : stalled 9 times (last best: 2.26783)
+[2021-05-17 01:14:57] [valid] Ep. 50 : Up. 205000 : cross-entropy : 7.8098 : stalled 9 times (last best: 7.79568)
+[2021-05-17 01:40:43] [valid] Ep. 51 : Up. 208633 : perplexity : 2.27148 : stalled 10 times (last best: 2.26783)
+[2021-05-17 01:40:44] [valid] Ep. 51 : Up. 208633 : cross-entropy : 7.81102 : stalled 10 times (last best: 7.79568)
