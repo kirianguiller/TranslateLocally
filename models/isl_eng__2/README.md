@@ -1,0 +1,1 @@
+This is the basic pipeline scripts that will need to be fully automated in the futur
