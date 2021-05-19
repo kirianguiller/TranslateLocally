@@ -7,3 +7,8 @@ Here you can find all that is necessary for fetching data, (basic) cleaning and 
 - please first install basic dependencies (marian, preprocess, cuda, etc...) and python global dependencies (lxml, fasttext, etc) from the two installations scripts present in `installations/` folder. 
 
 If you are on ubuntu 18.04 and have access to a cuda 11.1 compatible GPU, you should be able to reproduce what we have here :)
+
+## Information about the training
+- Number of lines after cleaning : ~ 7M
+- Number of lines after deduplication : ~ 4.5M
+- GPU : 1
