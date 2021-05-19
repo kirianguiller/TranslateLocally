@@ -40,5 +40,14 @@ cd marian-dev/build
 cmake .. -DUSE_SENTENCEPIECE=on -DCOMPILE_CPU=on -DUSE_FBGEMM=on
 cd ../..
 
+# install preprocess from KPU (https://github.com/kpu/preprocess)
+cd ~
+git clone https://github.com/kpu/preprocess
+cd preprocess
+mkdir build
+cd build
+cmake ..
+make -j4
+
 
 
