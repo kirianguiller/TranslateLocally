@@ -13,6 +13,8 @@ python3.7 -m pip install sacrebleu
 # install fasttext
 python3.7 -m pip install fasttext 
 
+# other dependencies
+python3.7 -m pip install lxml # for extracting xml (as in wmt21)
 
 # install mtdata
 cd ~ 
