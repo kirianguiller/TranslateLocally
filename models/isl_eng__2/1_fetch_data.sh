@@ -1,4 +1,4 @@
-mtdata get -l isl-eng -o "~/data/isl_eng/mtdata"  \
+python3.7 -m mtdata get -l isl-eng -o "~/data/isl_eng/mtdata"  \
     --tr \
     cc_aligned \
     EESC2017 \
