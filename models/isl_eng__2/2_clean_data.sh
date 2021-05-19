@@ -35,8 +35,11 @@ for corpus_name in \
     "paracrawl_v8" \
     "rapid2016" \
     "WikiMatrix_v1" ; do
-    ls
-    echo $corpus_name
+
+    echo "handling ${corpus_name} ..."
     bash ./clean-corpus.sh \
        "${PATH_DATA}/${corpus_name}-${SRC_ISO3}_${TRG_ISO3}" 
+    
+    echo "finished ${corpus_name} !"
+
   done
