@@ -3,6 +3,10 @@ set -e
 # install tons of stuff
 apt-get install -y --no-install-recommends doxygen g++-8 ca-certificates git wget gnupg build-essential lsb-release g++-8 automake autogen libtool cmake-data cmake unzip libboost-all-dev libblas-dev libopenblas-dev libz-dev libssl-dev protobuf-compiler libprotobuf-dev
 
+# add for filtering scripts
+apt-get install parallel
+apt-get install pigz
+
 # update g++
 update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 
