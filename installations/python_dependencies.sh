@@ -2,13 +2,16 @@
 # ... but let's just do it like this at the moment
 
 # install python 3.7
-sudo apt install python3.7-minimal
+sudo apt-get install python3.7-minimal python3.7-dev
 
 # update core packages
 python3.7 -m pip install --upgrade pip wheel setuptools
 
 # install sacrebleu
 python3.7 -m pip install sacrebleu 
+
+# install fasttext
+python3.7 -m pip install fasttext 
 
 
 # install mtdata
