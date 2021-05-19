@@ -1,7 +1,7 @@
 #!/bin/bash -v
 
 # set chosen gpus
-GPUS="0 1"
+GPUS="0"
 if [ $# -ne 0 ]
 then
     GPUS=$@
@@ -21,7 +21,7 @@ PATH_WMT21="/home/wran/data"
 
 if [ -d "$PATH_MODEL_FOLDER" ]; then
   echo "Folder ${DIR} already exist, exiting the script"
-  exit 1
+  # exit 1
 fi
 
 # rm -r $PATH_MODEL_FOLDER # remove this if you want to continue training !!!
