@@ -37,5 +37,4 @@ cmake .. -DUSE_SENTENCEPIECE=on -DCOMPILE_CPU=on -DUSE_FBGEMM=on
 cd ../..
 
 
-# install sacrebleu
-pip3 install sacrebleu --user
+
