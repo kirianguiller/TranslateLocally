@@ -1,4 +1,5 @@
-python3.7 -m mtdata get -l isl-eng -o "~/data/isl_eng/mtdata"  \
+# you should define a $DATA in your environment
+python3.7 -m mtdata get -l isl-eng -o "${PATH_DATA}/isl_eng/mtdata"  \
     --tr \
     cc_aligned \
     EESC2017 \
