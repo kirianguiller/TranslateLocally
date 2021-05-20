@@ -1,5 +1,3 @@
-
-
 SRC_ISO3="isl"
 TRG_ISO3="eng"
 
