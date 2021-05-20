@@ -13,8 +13,12 @@ TRG_ISO1="en"
 SRC_ISO3="isl"
 TRG_ISO3="eng"
 
+SEED=3
+
 MARIAN="/home/wran/marian-dev/build/marian"
-PATH_MODEL_FOLDER="/home/wran/models/${SRC_ISO3}_${TRG_ISO3}__2"
+
+current_timestamp=$(date +%s)
+PATH_MODEL_FOLDER="/home/wran/models/${SRC_ISO3}_${TRG_ISO3}__${current_timestamp}"
 
 PATH_DATA="/home/wran/data/${SRC_ISO3}_${TRG_ISO3}/mtdata/train-parts"
 PATH_WMT21="/home/wran/data"
@@ -45,6 +49,7 @@ $MARIAN \
     --disp-freq 500 \
     --valid-metrics chrf bleu perplexity cross-entropy \
     --valid-sets "${PATH_WMT21}/dev/xml/newsdev2021.${SRC_ISO1}-${TRG_ISO1}.${SRC_ISO1}" "${PATH_WMT21}/dev/xml/newsdev2021.${SRC_ISO1}-${TRG_ISO1}.${TRG_ISO1}" \
+    --valid-translation-output "$PATH_MODEL_FOLDER/newsdev2021.${SRC_ISO1}-${TRG_ISO1}.${TRG_ISO1}.output" \
     --valid-mini-batch 64 \
     --beam-size 6 \
     --normalize 0.6 \
@@ -63,13 +68,14 @@ $MARIAN \
     --clip-norm 5 \
     --devices $GPUS \
     --sync-sgd \
-    --seed 1111 \
+    --seed $SEED \
     --exponential-smoothing \
     --relative-paths \
     --after-epochs 50 \
     --overwrite \
     --keep-best \
     --early-stopping 10 \
+    --shuffle-in-ram "true" \
     # --guided-alignment "${PATH_DATA}/${train_prefix}.${SRC_ISO1}_${TRG_ISO1}.par.alg" \
     # --valid-script-path ./scripts/validate.sh \
     # --pretrained-model $PATH_PRETRAINED_MODEL \
