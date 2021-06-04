@@ -13,23 +13,23 @@ TRG_ISO1="en"
 SRC_ISO3="isl"
 TRG_ISO3="eng"
 
-SEED=2
+SEED=1000
 
 MARIAN="/home/wran/marian-dev/build/marian"
 
 current_timestamp=$(date +%s)
-PATH_MODEL_FOLDER="/home/wran/models/${SRC_ISO3}_${TRG_ISO3}__${current_timestamp}"
+PATH_MODEL_FOLDER="/home/wran/models/${SRC_ISO3}_${TRG_ISO3}__1621592152"
 
 PATH_DATA="/home/wran/data/${SRC_ISO3}_${TRG_ISO3}/mtdata/train-parts"
 PATH_WMT21="/home/wran/data"
 
-if [ -d "$PATH_MODEL_FOLDER" ]; then
-  echo "Folder ${DIR} already exist, exiting the script"
+# if [ -d "$PATH_MODEL_FOLDER" ]; then
+  # echo "Folder ${DIR} already exist, exiting the script"
   # exit 1
-fi
+# fi
 
 # rm -r $PATH_MODEL_FOLDER # remove this if you want to continue training !!!
-mkdir -p $PATH_MODEL_FOLDER
+# mkdir -p $PATH_MODEL_FOLDER
 
 MODEL_TYPE="transformer"
 
@@ -50,7 +50,7 @@ $MARIAN \
     --optimizer-delay 1 \
     --valid-freq 5000 \
     --save-freq 5000 \
-    --disp-freq 2500 \
+    --disp-freq 500 \
     --valid-metrics chrf bleu perplexity cross-entropy \
     --valid-mini-batch 64 \
     --beam-size 6 \
@@ -75,6 +75,7 @@ $MARIAN \
     # --transformer-heads 8 \
     # --transformer-postprocess-emb d \
     # --transformer-postprocess dan \
+    # --transformer-dropout 0.1 \
     # --label-smoothing 0.1 \
     # --learn-rate 0.0003 \
     # --lr-warmup 16000 \
