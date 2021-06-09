@@ -12,12 +12,8 @@ TOOLS=./tools
 
 declare -A ISO3_TO_1
 
-SRC_ISO3="isl"
-TRG_ISO3="eng"
 
 
-SRC_ISO1="is"
-TRG_ISO1="en"
 
 ISO3_TO_1[${SRC_ISO3}]=$SRC_ISO1
 ISO3_TO_1[${TRG_ISO3}]=$TRG_ISO1
