@@ -38,8 +38,8 @@ cd ~
 git clone https://github.com/marian-nmt/marian-dev
 mkdir -p marian-dev/build
 cd marian-dev/build
-cmake .. -DUSE_SENTENCEPIECE=on -DCOMPILE_CPU=on -DUSE_FBGEMM=on
-cd ../..
+sudo cmake .. -DUSE_SENTENCEPIECE=on -DCOMPILE_CPU=on -DUSE_FBGEMM=on
+sudo make -j 10
 
 # install preprocess from KPU (https://github.com/kpu/preprocess)
 cd ~
@@ -48,7 +48,7 @@ cd preprocess
 mkdir build
 cd build
 cmake ..
-make -j4
+sudo make -j4
 
 
 
