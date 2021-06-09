@@ -2,7 +2,7 @@
 
 PATH_TRANSLATE_LOCALLY="/root/projects/NMT/TranslateLocally"
 PATH_DATA="/tank/datasets/translation/cheepl"
-PATH_MODELS="/tank/models/translation/cheepl/"
+PATH_MODELS="/tank/models/translation/cheepl"
 PATH_PREPROCESS_DEDUP="/root/preprocess/build/bin/dedupe"
 PATH_MARIAN_BUILD="/root/marian/build/"
 
