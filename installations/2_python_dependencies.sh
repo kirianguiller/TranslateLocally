@@ -7,17 +7,29 @@ sudo apt-get install python3.7-minimal python3.7-dev
 # update core packages
 python3.7 -m pip install --upgrade pip wheel setuptools
 
+
+python3.7 -m venv venv
+
+source venv/bin/activate
+
+pip install --upgrade pip wheel setuptools
+
 # install sacrebleu
-python3.7 -m pip install sacrebleu 
+# pip install sacrebleu 
 
 # install fasttext
-python3.7 -m pip install fasttext 
+pip install fasttext 
 
 # other dependencies
-python3.7 -m pip install lxml # for extracting xml (as in wmt21)
+pip install lxml # for extracting xml (as in wmt21)
 
 # install mtdata
 cd ~ 
 git clone https://github.com/thammegowda/mtdata
 cd mtdata
-python3.7 -m pip install --editable .
+pip install --editable .
+
+cd ~
+git clone https://github.com/Tortlang/sacrebleu
+cd sacrebleu
+pip install .
