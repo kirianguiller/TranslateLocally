@@ -4,10 +4,9 @@
 sudo apt install python3-pip
 
 # install python 3.7
-sudo apt-get install -y --no-install-recommends python3.7-minimal python3.7-dev python3.7
-sudo apt-get install -y python3.7-venv
+sudo apt-get install -y --no-install-recommends python3.7-minimal python3.7-dev python3.7 python3.7-venv
 # update core packages
-python3.7 -m pip install --upgrade pip wheel setuptools venv
+python3.7 -m pip install --upgrade pip wheel setuptools
 
 
 python3.7 -m venv venv
