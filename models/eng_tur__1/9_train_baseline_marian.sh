@@ -39,8 +39,8 @@ $MARIAN \
     --vocabs "${PATH_MTDATA}/source.spm" "${PATH_MTDATA}/target.spm" \
     --train-sets "${PATH_MTDATA}/${SRC_ISO3}.clean.dedup.txt" "${PATH_MTDATA}/${TRG_ISO3}.clean.dedup.txt" \
     --seed $SEED \
-    --valid-sets "${PATH_TATOEBACHALLENGE}/dev.${SRC_ISO1}-${TRG_ISO1}.${SRC_ISO1}.txt" "${PATH_TATOEBACHALLENGE}/dev.${SRC_ISO1}-${TRG_ISO1}.${TRG_ISO1}.txt" \
-    --valid-translation-output "$PATH_MODEL_FOLDER/dev.${SRC_ISO1}-${TRG_ISO1}.${TRG_ISO1}.txt.output" \
+    --valid-sets "${PATH_TATOEBACHALLENGE}/dev.${SRC_ISO1}-${TRG_ISO1}.${SRC_ISO1}.txt.10000" "${PATH_TATOEBACHALLENGE}/dev.${SRC_ISO1}-${TRG_ISO1}.${TRG_ISO1}.txt.10000" \
+    --valid-translation-output "$PATH_MODEL_FOLDER/dev.${SRC_ISO1}-${TRG_ISO1}.${TRG_ISO1}.txt.10000.output" \
     --devices $GPUS \
     --mini-batch-fit -w ${MINI_BATCH_FIT} \
     --max-length 100 \
