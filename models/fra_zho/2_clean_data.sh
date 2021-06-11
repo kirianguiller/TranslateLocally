@@ -2,6 +2,8 @@
 
 source ./0_env.sh
 
+source ../../venv/bin/activate
+
 PATH_TRAIN_PARTS="${PATH_DATA}/${SRC_ISO3}_${TRG_ISO3}/mtdata/train-parts"
 PATH_CLEAN_SCRIPTS="${PATH_TRANSLATE_LOCALLY}/clean/"
 

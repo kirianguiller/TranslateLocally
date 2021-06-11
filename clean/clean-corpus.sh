@@ -46,7 +46,7 @@ for data in $@; do
     ######################################################################
     # Rule-based filtering
     pigz -dc $data.${SRC_ISO3}_${TRG_ISO3}.nrm.uniq.gz \
-        | parallel --no-notice --pipe -k -j16 --block 50M "python3.7 $TOOLS/clean-parallel.py -l1 ${SRC_ISO1} -l2 ${TRG_ISO1} --debug" \
+        | parallel --no-notice --pipe -k -j16 --block 50M "python $TOOLS/clean-parallel.py -l1 ${SRC_ISO1} -l2 ${TRG_ISO1} --debug" \
         2> $data.${SRC_ISO3}_${TRG_ISO3}.clean.debug.txt \
         | pigz > $data.${SRC_ISO3}_${TRG_ISO3}.rule-based.gz
 
@@ -55,7 +55,7 @@ for data in $@; do
     ######################################################################
     # Language identification
     pigz -dc $data.${SRC_ISO3}_${TRG_ISO3}.rule-based.gz \
-        | parallel --no-notice --pipe -k -j16 --block 50M "python3.7 -Wi $TOOLS/langid-fasttext.py -f 1 | python3.7 -Wi $TOOLS/langid-fasttext.py -f 1" \
+        | parallel --no-notice --pipe -k -j16 --block 50M "python -Wi $TOOLS/langid-fasttext.py -f 1 | python3.7 -Wi $TOOLS/langid-fasttext.py -f 1" \
         | grep -P "^${SRC_ISO1}\t${TRG_ISO1}\t" \
         | cut -f3,4 \
         | pigz > $data.${SRC_ISO3}_${TRG_ISO3}.langid.gz
