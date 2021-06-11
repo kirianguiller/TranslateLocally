@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "src": {
+      "iso1": "fr",
+      "iso3": "fra",
+      "iso3plus": "fra"
+    },
+    "trg": {
+      "iso1": "zh",
+      "iso3": "zho",
+      "iso3plus": "cmn_Hans"
+    }
+  },
+  "path_data": "/tank/datasets/translation/cheepl"
+}
